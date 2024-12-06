@@ -277,7 +277,7 @@ class Cli {
 
   // method to find a vehicle to tow
   // TODO: add a parameter to accept a truck object
-  findVehicleToTow(): void {
+  findVehicleToTow(truck: Truck): void {
     inquirer
       .prompt([
         {
@@ -294,9 +294,20 @@ class Cli {
       ])
       .then((answers) => {
         // TODO: check if the selected vehicle is the truck
-        //if(answers.)
-        // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
-        // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
+        console.log("answers.value = " + answers.value);
+        if(answers.vehicle === truck){
+          // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
+          console.log("The truck can't tow itself.");
+          answers.vehicle.performActions(); //should this use the "this" keyword?
+        }
+        else{
+          // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
+          //!!! perform actions has to be done on vehicles because it is a method of the Cli class. I'm not sure how I would call 
+          //perform actions on a truck because truck is of type Truck. answers.vehicle can't be a truck if we have gotten to this point
+          console.log(`${answers.vehicle} is being towed by ${truck}`);
+          answers.vehicle.performActions(); //This literally can't be a truck.
+        }
+        
       });
   }
 

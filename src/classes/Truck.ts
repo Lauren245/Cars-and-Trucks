@@ -31,7 +31,7 @@ class Truck extends Vehicle{
     weight: number,
     topSpeed: number,
     wheels: Wheel[],
-    towingCapacity: number,
+    towingCapacity: number
   ){
     // TODO: The constructor should call the constructor of the parent class, Vehicle
     super();
@@ -44,25 +44,29 @@ class Truck extends Vehicle{
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
-    this.towingCapacity = towingCapacity;
-
      // TODO: The constructor should check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
     if(wheels.length !== 4){
       this.wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
     }else{
       this.wheels = wheels;
     };
+    this.towingCapacity = towingCapacity;
 
   };
   // TODO: Implement the tow method from the AbleToTow interface
   tow(vehicle: Truck | Motorbike | Car): void {
     // TODO: Get the make an model of the vehicle if it exists
-    //!!! can't implement until Motorbike is implemented
-    //if(vehicle.make && vehicle.model)
-    // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
-    // TODO: If it is, log that the vehicle is being towed
-    // TODO: If it is not, log that the vehicle is too heavy to be towed
-  }
+    if(vehicle.make && vehicle.model){
+      // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
+      if (vehicle.weight <= this.towingCapacity){
+          // TODO: If it is, log that the vehicle is being towed
+          console.log('The vehicle is being towed');
+      }else{
+        // TODO: If it is not, log that the vehicle is too heavy to be towed
+        console.log('The vehicle is too heavy to be towed');
+      };
+    };
+  };
 
   // TODO: Override the printDetails method from the Vehicle class
   override printDetails(): void {
@@ -91,9 +95,9 @@ class Truck extends Vehicle{
     console.log(
       `Wheel 4: ${this.wheels[3].getDiameter} inch with a ${this.wheels[3].getTireBrand} tire`
     );
-  }
+  };
   
-}
+};
 
 // Export the Truck class as the default export
 export default Truck;

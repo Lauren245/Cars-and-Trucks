@@ -294,20 +294,17 @@ class Cli {
       ])
       .then((answers) => {
         // TODO: check if the selected vehicle is the truck
-        console.log("answers.value = " + answers.value);
-        if(answers.vehicle === truck){
-          // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
-          console.log("The truck can't tow itself.");
-          answers.vehicle.performActions(); //should this use the "this" keyword?
+        if(answers.vehicleToTow === truck){
+            // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
+            console.log("Silly goose! The truck can't tow itself.");
         }
         else{
-          // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
-          //!!! perform actions has to be done on vehicles because it is a method of the Cli class. I'm not sure how I would call 
-          //perform actions on a truck because truck is of type Truck. answers.vehicle can't be a truck if we have gotten to this point
-          console.log(`${answers.vehicle} is being towed by ${truck}`);
-          answers.vehicle.performActions(); //This literally can't be a truck.
+            // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
+            truck.tow(answers.vehicleToTow);
+            console.log("this = " + this); //TEST LINE
+            this.performActions(); //!!! This maybe wrong. Im not sure what "this" is refering to here. 
         }
-        
+       
       });
   }
 
@@ -329,6 +326,8 @@ class Cli {
             'Turn right',
             'Turn left',
             'Reverse',
+            'Tow a vehicle',
+            'Do a wheelie',
             'Select or create another vehicle',
             'Exit',
           ],
@@ -394,7 +393,29 @@ class Cli {
           }
         }
         // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
+        else if(answers.action === 'Tow a vehicle'){
+          for(const vehicle of this.vehicles){
+            console.log(`inside for of loop`);
+            console.log(`vehicle.vin = ${vehicle.vin}. this.selectedVehicleVin = ${this.selectedVehicleVin}`);
+            console.log(`The vehicle is a: ${vehicle.constructor.name}`);
+            if(vehicle.vin === this.selectedVehicleVin && vehicle instanceof Truck){
+                this.findVehicleToTow(vehicle);
+                return;
+            }
+          }
+          //might want to circle back and add a message if the vehicle is not a truck so there is some responsiveness for the user.
+        }
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
+        else if(answers.action === 'Do a wheelie'){
+          for(const vehicle of this.vehicles){
+            console.log(`inside for of loop`);
+            console.log(`vehicle.vin = ${vehicle.vin}. this.selectedVehicleVin = ${this.selectedVehicleVin}`);
+            console.log(`The vehicle is a: ${vehicle.constructor.name}`);
+            if(vehicle.vin === this.selectedVehicleVin && vehicle instanceof Motorbike){
+                vehicle.wheelie();
+            }
+          }
+        }
         else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
           this.startCli();

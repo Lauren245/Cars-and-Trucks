@@ -256,6 +256,7 @@ class Cli {
       ])
       .then((answers) => {
         // TODO: Use the answers object to pass the required properties to the Motorbike constructor
+        
         const motorbike = new Motorbike(
           Cli.generateVin(),
           answers.color,
@@ -264,7 +265,8 @@ class Cli {
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
-          []
+          [new Wheel(answers.frontWheelDiameter, answers.frontWheelBrand),
+          new Wheel(answers.rearWheelDiameter, answers.rearWheelBrand)]
         );
         // TODO: push the motorbike to the vehicles array
         this.vehicles.push(motorbike);
@@ -297,6 +299,7 @@ class Cli {
         if(answers.vehicleToTow === truck){
             // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
             console.log("Silly goose! The truck can't tow itself.");
+            this.performActions();
         }
         else{
             // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
@@ -395,9 +398,9 @@ class Cli {
         // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
         else if(answers.action === 'Tow a vehicle'){
           for(const vehicle of this.vehicles){
-            console.log(`inside for of loop`);
-            console.log(`vehicle.vin = ${vehicle.vin}. this.selectedVehicleVin = ${this.selectedVehicleVin}`);
-            console.log(`The vehicle is a: ${vehicle.constructor.name}`);
+            // console.log(`inside for of loop`);
+            // console.log(`vehicle.vin = ${vehicle.vin}. this.selectedVehicleVin = ${this.selectedVehicleVin}`);
+            // console.log(`The vehicle is a: ${vehicle.constructor.name}`);
             if(vehicle.vin === this.selectedVehicleVin && vehicle instanceof Truck){
                 this.findVehicleToTow(vehicle);
                 return;

@@ -402,7 +402,14 @@ class Cli {
                   this.findVehicleToTow(vehicle);
                   return;
                 }else{
-                  console.log(`Your ${vehicle.make} ${vehicle.model} is a ${(vehicle.constructor.name).toLowerCase()}. It must be a truck to tow vehicles.`);
+                  //check that vehicle has a make and model
+                  if(vehicle.make && vehicle.model){
+                      console.log(`Your ${vehicle.make} ${vehicle.model} is a ${(vehicle.constructor.name).toLowerCase()}. It must be a truck to tow vehicles.`);
+                  }
+                  else{
+                    console.log("The vehicle must be a truck to tow vehicles.")
+                  }
+                  
                 }
             }
             
@@ -415,7 +422,14 @@ class Cli {
                if(vehicle instanceof Motorbike){
                     vehicle.wheelie();
                 }else{
-                  console.log(`Your ${vehicle.make} ${vehicle.model} is a ${(vehicle.constructor.name).toLowerCase()}. It must be a motorbike to do a wheelie.`);
+                  //check that vehicle has a make and model
+                  if(vehicle.make && vehicle.model){
+                    console.log(`Your ${vehicle.make} ${vehicle.model} is a ${(vehicle.constructor.name).toLowerCase()}. It must be a motorbike to do a wheelie.`);
+                  }
+                  else{
+                    console.log("The vehicle must be a motorbike to do a wheelie.");
+                  }
+                  
                 }
             }
           }

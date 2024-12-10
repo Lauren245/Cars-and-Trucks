@@ -401,21 +401,30 @@ class Cli {
             // console.log(`inside for of loop`);
             // console.log(`vehicle.vin = ${vehicle.vin}. this.selectedVehicleVin = ${this.selectedVehicleVin}`);
             // console.log(`The vehicle is a: ${vehicle.constructor.name}`);
-            if(vehicle.vin === this.selectedVehicleVin && vehicle instanceof Truck){
-                this.findVehicleToTow(vehicle);
-                return;
+            if(vehicle.vin === this.selectedVehicleVin){
+                if(vehicle instanceof Truck){
+                  this.findVehicleToTow(vehicle);
+                  return;
+                }else{
+                  console.log("this vehicle is not a truck.");
+                }
             }
+            
           }
           //might want to circle back and add a message if the vehicle is not a truck so there is some responsiveness for the user.
         }
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
         else if(answers.action === 'Do a wheelie'){
           for(const vehicle of this.vehicles){
-            console.log(`inside for of loop`);
-            console.log(`vehicle.vin = ${vehicle.vin}. this.selectedVehicleVin = ${this.selectedVehicleVin}`);
-            console.log(`The vehicle is a: ${vehicle.constructor.name}`);
-            if(vehicle.vin === this.selectedVehicleVin && vehicle instanceof Motorbike){
-                vehicle.wheelie();
+            // console.log(`inside for of loop`);
+            // console.log(`vehicle.vin = ${vehicle.vin}. this.selectedVehicleVin = ${this.selectedVehicleVin}`);
+            // console.log(`The vehicle is a: ${vehicle.constructor.name}`);
+            if(vehicle.vin === this.selectedVehicleVin){
+               if(vehicle instanceof Motorbike){
+                    vehicle.wheelie();
+                }else{
+                  console.log("this vehicle is not a motorbike.");
+                }
             }
           }
         }

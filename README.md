@@ -105,3 +105,43 @@ Email: laurenmoorejm@gmail.com
 
 
 ## Srceenshots
+![Image of the integrated terminal showing the selection list that lets the user create a new vehicle or select an existing one.](./assets/screenshots/vehicles-project-opening-menu.jpg)
+
+**Image showing a selection list to create a new vehicle or select an existing one.**
+
+
+![Image of the integrated terminal showing the selection list for vehicle type that pops up if the user opts to create a new vehicle](./assets/screenshots/vehicles-project-creation-select-vehicle.jpg)
+
+**Image showing the vehicle type selection list for creating a new vehicle.**
+
+
+![Image of the integrated terminal showing a completed Truck creation form. It has the following fields with these inputs. enter color bright white. enter make ram. enter model 2500 laramie. enter year 2021. enter weight 7500. enter top speed 100. enter towing capacity 19000.](./assets/screenshots/vehicles-project-vehicle-creation.jpg)
+
+**Image of a completed Truck creation form.**
+
+
+![Image of the integrated terminal showing the first part of a selection list of actions that a vehicle can perform. The list has the following options. print details. start vehicle. accelerate 5 mph. decelerate 5 mph. stop vehicle. turn right. turn left.](./assets/screenshots/vehicles-project-actions-list-1-of-2.jpg)
+
+**Image showing the first half of the selection list of actions that a vehicle can perform.**
+
+
+![Image of the integrated terminal showing the second part of a selection list of actions that a vehicle can perform. The list has been scrolled down so that the first item in the list of options is now turn right. The list has the following options. turn right. turn left. reverse. tow a vehicle. do a wheelie. select or create another vehicle. exit.](./assets/screenshots/vehicles-project-actions-list-2-of-2.jpg)
+
+**Image showing the second half of the selection list of actions that a vehicle can perform.**
+
+
+![Image of the integrated terminal showing the selection list of towable vehicles that appear when the selects the tow a vehicle option out of the actions list while using a truck. There are three choices in the list. Each choice is a vehicle and includes a vin number followed by two dashes and the make and model of the vehicle with the corresponding vin number.](./assets/screenshots/vehicles-project-tow-vehicle-selection-menu.jpg)
+
+**Image of the towable vehicle selection list for trucks.**
+
+![Image of the integrated terminal showing a selection list of existing vehicles that can be chosen from if the user opts to select an existing vehicle instead of creating a new one.Each choice includes a vin number followed by two dashes and the make and model of the vehicle with the corresponding vin number.](./assets/screenshots/vehicles-project-select-vehicle.jpg)
+
+**Image of the selection list for selecting an existing vehicle.**
+
+![Image of the integrated terminal showing the outcome of selecting the do a wheelie option from the actions selection list. The output says Motorbike Harley Davidson Sportster is doing a wheelie.](./assets/screenshots/vehicles-project-wheelie-action.jpg)
+
+**Image showing the outcome of performing the *do a wheelie* action on a Harley Davidson Sportster motorbike.**
+
+![Image of the integrated terminal showing the outcome of selecting the print details option from the actions selection list on a toyota camry.The list contains. vehicle started false. vehicle current speed 0 mph. a VIN number consiting of a long string of randomly generated numbers and letters. color blue. make toyota. model camry. year 2021. weight 3000 lbs. top speed 130 mph. wheel 1 18 inch with a goodyear tire. wheel 2 18 inch with a goodyear tire. wheel 3 18 inch with a goodyear tire. wheel 4 18 inch with a goodyear tire](./assets/screenshots/vehicles-project-print-details.jpg)
+
+**Image showing the outcome of performing the *print details* action on a Toyota Camry.**

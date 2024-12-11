@@ -23,7 +23,7 @@
 
 [Screenshots](#screenshots)
 
-[Video Demonstration](#video-demonstation)
+[Video Demonstration](#video-demonstration)
 
 ## Description
 This application is a command-line interface (CLI) for managing and performing actions on different types of vehicles, including cars, trucks, and motorbikes. It allows users to:
@@ -104,7 +104,7 @@ Email: laurenmoorejm@gmail.com
 1. **[Inquirer.js](https://github.com/SBoudrias/Inquirer.js)** Copyright (c) 2023 Simon Boudrias (twitter: [@vaxilart](https://twitter.com/Vaxilart)) - Licensed under the MIT license.
 
 
-## Srceenshots
+## Screenshots
 ![Image of the integrated terminal showing the selection list that lets the user create a new vehicle or select an existing one.](./assets/screenshots/vehicles-project-opening-menu.jpg)
 
 **Image showing a selection list to create a new vehicle or select an existing one.**
@@ -145,3 +145,9 @@ Email: laurenmoorejm@gmail.com
 ![Image of the integrated terminal showing the outcome of selecting the print details option from the actions selection list on a toyota camry.The list contains. vehicle started false. vehicle current speed 0 mph. a VIN number consiting of a long string of randomly generated numbers and letters. color blue. make toyota. model camry. year 2021. weight 3000 lbs. top speed 130 mph. wheel 1 18 inch with a goodyear tire. wheel 2 18 inch with a goodyear tire. wheel 3 18 inch with a goodyear tire. wheel 4 18 inch with a goodyear tire](./assets/screenshots/vehicles-project-print-details.jpg)
 
 **Image showing the outcome of performing the *print details* action on a Toyota Camry.**
+
+## Video Demonstration
+
+
+
+**[Back to top](#cars-and-trucks-and-motorbikes)**

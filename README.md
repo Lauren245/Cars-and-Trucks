@@ -77,14 +77,31 @@ To install this application, follow these steps:
 **Note: The actions list is too long to fit in the console without scrolling, making it appear as though the list regenerates. In reality, the selector simply can't return to the top.**
 
 ## Tests
-
+Currently, there are no unit tests. There are test objects created for each type of vehicle in the index.ts file.
 
 ## License
+Copyright 2024 Lauren Moore
+
+This software uses an [MIT license](https://opensource.org/license/MIT).
 
 ## Questions
+If you have additional questions, you can contact me at: 
+
+GitHub: [Lauren245](https://github.com/Lauren245)
+
+Email: laurenmoorejm@gmail.com
+
 
 ## Resources
-1. [Explain the purpose of never in TypeScript](https://www.geeksforgeeks.org/explain-the-purpose-of-never-type-in-typescript-2/)
-2. [TypeScipt implements keyword Google search](https://www.google.com/search?q=typescript+implements&rlz=1C1VDKB_enUS1100US1100&oq=typescript+implements&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORiRAhiABBiKBTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIMCAQQABgUGIcCGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMg0ICBAAGIYDGIAEGIoFMg0ICRAAGIYDGIAEGIoF0gEINzY4NGowajeoAgiwAgE&sourceid=chrome&ie=UTF-8)
-3. [How TypeScript Interfaces Work – Explained with Examples](https://www.freecodecamp.org/news/how-typescript-interfaces-work/)
-4. [How to get the class name of an object in JavaScript](https://www.geeksforgeeks.org/how-to-get-the-class-name-of-an-object-in-javascript/)
+
+### Tutorials
+1. **[TypeScipt implements keyword Google search](https://www.google.com/search?q=typescript+implements&rlz=1C1VDKB_enUS1100US1100&oq=typescript+implements&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORiRAhiABBiKBTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIMCAQQABgUGIcCGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMg0ICBAAGIYDGIAEGIoFMg0ICRAAGIYDGIAEGIoF0gEINzY4NGowajeoAgiwAgE&sourceid=chrome&ie=UTF-8)** Google Gemini-generated reference for the implements keyword functionality.
+2. **[What's the Difference Between 'extends' and 'implements' in TypeScript ?](https://www.geeksforgeeks.org/whats-the-difference-between-extends-and-implements-in-typescript/)** by Geeks For Geeks: Used as reference for distinguishing between the extends and implements keywords.
+3. **[How TypeScript Interfaces Work – Explained with Examples](https://www.freecodecamp.org/news/how-typescript-interfaces-work/)** by Sahil Mahapatra (freeCodeCamp): Guide on interface functionality and syntax.
+4. **[How to get the class name of an object in JavaScript](https://www.geeksforgeeks.org/how-to-get-the-class-name-of-an-object-in-javascript/)** by Geeks for Geeks: Used as reference for checking what an object is an instance of using the instanceof keyword (i.e. ensuring only trucks are allowed to tow other vehicles). Also used as a reference for getting class names (i.e. the error message when attempting to tow a vehicle when the user's vehicle type is not a truck).
+
+### 3rd-Party Software
+1. **[Inquirer.js](https://github.com/SBoudrias/Inquirer.js)** Copyright (c) 2023 Simon Boudrias (twitter: [@vaxilart](https://twitter.com/Vaxilart)) - Licensed under the MIT license.
+
+
+## Srceenshots

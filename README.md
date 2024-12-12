@@ -147,7 +147,8 @@ Email: laurenmoorejm@gmail.com
 **Image showing the outcome of performing the *print details* action on a Toyota Camry.**
 
 ## Video Demonstration
+[Link to demonstration video on Google Drive](https://drive.google.com/file/d/1M3G24OxV4PiD2kCppD2596TCDt1Z982z/view?usp=sharing)
 
-
+---
 
 **[Back to top](#cars-and-trucks-and-motorbikes)**
